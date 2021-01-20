@@ -1,5 +1,5 @@
 # Project Description
-In this project, I will try to create a video streaming website. ALl the resources will be inside a VPC and the only way to access them is through Load balancer. I will try to incorporate path based routing with 2 web pages( home page and a video streaming page ). This will be an added security feature to the resources within VPC. I will also try to include Route 53 and access the webpages through a free domain.
+In this project, I will try to create a video streaming website. All the resources will be inside a private subnet of VPC and the only way to access them is through Load balancer. I will try to incorporate path based routing with 2 web pages( home page and a video streaming page ). This will be an added security feature to the resources within VPC. I will also include Route 53 and access the webpages through a free domain.
 
 Step 1 : Create a VPC with 2 private subnets in different AZ's for resilence purpose
 
