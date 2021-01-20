@@ -23,8 +23,17 @@ step 15: once load balancer is created , edit rules under listener
 step 16 : Insert rule for both the servers ( home and streaming server )   # (set path to /home* and /watch* and forward to respective server )
 step 17 : access the home page using the the DNS name of the load balancer
 step 18 : but stremaing page may not work ( DNS/watch ) because we need to add a folder inside (/var/www/html )
-step 19 : login to streaming server and create a directory called watch inside the /var/www/html
-          $sudo cp ./index.html ./watch/
-          
- 
+step 19 : login to both server and create a directory called watch and home inside the /var/www/html
+          $sudo cp ./index.html ./watch/        $sudo cp ./index.html ./home/ 
+         
+step 20: create a free domain from freenom website 
+step 21: create hosted zone under route 53 . enter the domain name which we just created 
+step 22: copy the name servers and paste in into freenom dashboard . this will connect my domain to the route53 
+step 23: create record set in route 53 and point the route 53 to load balancer 
+                * select alias and select your load balancer as alias target 
+step 24 : create another record set with www entered as a prefix for the record name 
+                  * select alias and select your load balancer as alias target
+step 25 : Try accessing the home page using the domain name and will work . similarly try with /watch and it should open the streaming page 
+
+
         
